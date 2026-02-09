@@ -5,6 +5,19 @@ import PlanCard from "./PlanCard";
 const PlanCards = () => {
   const plans = [
     {
+      title: "Launch",
+      price: "$ 0",
+      description: "Get started for free.",
+      features: [
+        "1 video per month",
+        "72h Turnaround",
+        "Basic stock footage",
+        "No revisions",
+      ],
+      buttonText: "Upgrade to Starter",
+      highlighted: false,
+    },
+    {
       title: "Starter",
       price: "$ 499",
       description: "Perfect for individuals.",
@@ -59,7 +72,7 @@ const PlanCards = () => {
         </p>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto my-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 max-w-5xl mx-auto my-6">
         {plans.map((plan) => (
           <PlanCard key={plan.title} plan={plan} />
         ))}
